@@ -45,7 +45,7 @@ const path = {
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
-    clean: "./" + distPath
+    clean: "./" + distPath + '*'
 }
 
 
@@ -88,14 +88,12 @@ function css(cb) {
                 this.emit('end');
             }
         }))
-        .pipe(sass({
-            includePaths: './node_modules/'
-        }))
+        .pipe(sass())
         .pipe(autoprefixer({
             cascade: true
         }))
-        .pipe(cssbeautify())
-        .pipe(dest(path.build.css))
+        // .pipe(cssbeautify())
+        // .pipe(dest(path.build.css))
         .pipe(cssnano({
             zindex: false,
             discardComments: {
@@ -159,6 +157,10 @@ function js(cb) {
                     }
                 ]
             }
+        }))
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".js"
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
