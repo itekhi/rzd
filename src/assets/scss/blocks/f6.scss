@@ -1,0 +1,125 @@
+.f6 {
+    position: relative;
+    padding-top: 72px;
+    color: #000;
+}
+.f6::after {
+    display: block;
+    content: '';
+    width: 13px;
+    height: 120px;
+    background-color: #E8331A;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.f6__container {
+    max-width: 1283px;
+    margin: 0 auto;
+}
+.f6__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    color: #000000;
+    margin: 0 0 50px;
+}
+
+
+
+.acc_head {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.accordionjs .acc_section.acc_active > .acc_head {
+    border-bottom: none!important;
+    background: #fff;
+}
+
+.acc_section {
+    background-color: transparent;
+}
+.accordionjs .acc_section {
+    border: none!important;
+}
+.accordionjs .acc_active {
+
+    margin-bottom: 0!important;
+    padding-bottom: 40px;
+}
+.acc_content {
+    font-size: 18px;
+    line-height: 22px;
+    color: #3f4144;
+}
+.acc_head::after {
+    display: block;
+    content: '';
+    background-image: url(../images/arrow-slide.svg);
+    width: 25px;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-7px);
+}
+.accordionjs .acc_section.acc_active > .acc_head::after {
+    background-image: url(../images/arrow-slide.svg);
+    width: 25px;
+    height: 14px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-7px) rotate(180deg);
+}
+
+.f6__form {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 80px;
+    margin-top: 40px;
+}
+.f6__form-input {
+    width: 69%;
+    border: none;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #656565;
+    padding-left: 30px;
+}
+.f6__form-input::placeholder {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #656565;
+}
+.f6__form-button {
+    width: 31%;
+    border: none;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    background: #E8331A;
+    color: #FFFFFF;
+}
+.f6-curve {
+    position: absolute;
+    top: 764px;
+    left: 76px;
+   
+}
+.curve-6__svg {
+    position: absolute;
+    top: -1px;
+}
+.s-9 span {
+    list-style: inside;
+}

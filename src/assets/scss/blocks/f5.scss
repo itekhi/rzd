@@ -1,0 +1,128 @@
+.f5__container {
+    max-width: 860px;
+    margin: 280px  auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 125px;
+    color: #000000;
+    position: relative;
+}
+.f5__block {
+    display: flex;
+    column-gap: 155px;
+}
+.f5__block-img {
+    width: 100%;
+    width: 235px;
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 112px;
+    text-transform: uppercase;
+    color: #bababa;
+    background: #F5F5F5;
+    box-shadow: -30.4721px -30.4721px 69.2548px #FFFFFF, 30.4721px 36.0125px 69.2548px rgba(214, 214, 214, 0.738227), inset 19.3913px 13.851px 30.4721px rgba(191, 191, 191, 0.04);
+    border-radius: 174.522px;
+}
+.f5__block-info {
+    max-width: 476px;
+}
+.f5__block-group {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 24px;
+}
+.f5__block-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+.f5__block-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #000000;
+    margin-bottom: 24px;
+}
+.f5__btn {
+    background: #E8331A;
+    border-radius: 56px;    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 7px 47px;
+    outline: none;
+    border: none;
+}
+.f5 {
+    position: relative;
+}
+.f5::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url(../images/f5-img-1.png);
+    width: 312px;
+    height: 312px;
+    top: 100px;
+    right: 5%;
+}
+.position-block-6 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.position-block-6::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url(../images/f5-img-2.png);
+    width: 383px;
+    height: 433px;
+    bottom: 200px;
+    right: 5%;
+}
+.position-block-7 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.position-block-7::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url(../images/f5-img-4.png);
+    width: 539px;
+    height: 550px;
+    bottom: 100px;
+    left: 0;
+}
+.position-block-7::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url(../images/f5-img-3.png);
+    width: 276px;
+    height: 284px;
+    bottom: 230px;
+    right: 20%;
+}
+.f5-curve {
+    position: absolute;
+    top: -90px;
+    left: -348px;
+}
+
+.f5__btn a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 999;
+}

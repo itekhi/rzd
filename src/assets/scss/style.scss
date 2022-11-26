@@ -1,0 +1,56 @@
+@import "vars";
+@import "vendor/reset";
+
+html, body {
+    width:100%;
+    height:100%;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #F5F5F5;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $white;
+    
+}
+b {
+    font-weight: bold;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/* Blocks */
+@import "blocks/header.scss";
+@import "blocks/fs1.scss";
+@import "blocks/fs2.scss";
+@import "blocks/f3.scss";
+@import "blocks/f4.scss";
+@import "blocks/f5.scss";
+@import "blocks/accordion.scss";
+@import "blocks/f6.scss";
+@import "blocks/f7.scss";
+@import "blocks/f8.scss";
+@import "blocks/thanks.scss";
+@import "blocks/footer.scss";
+@import "blocks/tablet.scss";
+@import "blocks/animation.scss";
+@import "blocks/media.scss";
+
+
+
+
+
+
+
+
+
