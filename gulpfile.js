@@ -45,7 +45,11 @@ const path = {
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
-    clean: "./" + distPath + '*'
+    clean: [
+        "./" + distPath + 'assets/',
+        "./" + distPath + 'index.html',
+        "./" + distPath + 'thanks.html',
+    ]
 }
 
 
