@@ -6,7 +6,7 @@ git commit -am "$*"
 git push
 
 # build site
-gulp build
+./node_modules/.bin/gulp build
 
 cd dist
 
