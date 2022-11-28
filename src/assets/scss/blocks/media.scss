@@ -94,7 +94,7 @@
         margin-top: 150px;
     }
     .f8__container {
-        height: 710px;
+        height: 610px;
     }
 }
 @media screen and (max-width: 1440px) { 
@@ -271,6 +271,11 @@
         -webkit-transform: translate(200%, 140%);
         -ms-transform: translate(200%, 140%);
         transform: translate(200%, 140%);
+    }
+    #slide-7 {
+        -webkit-transform: translate(300%, 340%);
+        -ms-transform: translate(300%, 340%);
+        transform: translate(300%, 340%);
     }
     #slide-8 {
         -webkit-transform: translate(400%, 357%);

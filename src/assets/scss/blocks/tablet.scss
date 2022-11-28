@@ -23,6 +23,9 @@
     html ,body {
         overflow: unset!important;
     }
+    #page-content {
+        overflow: hidden;
+    }
     .tablet-header__container {
         display: flex;
         align-items: center;

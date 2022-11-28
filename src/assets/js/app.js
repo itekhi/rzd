@@ -16,6 +16,44 @@ const mediaTablet = window.matchMedia('(max-width: 1000px)');
 const mediaMobile = window.matchMedia('(max-width: 500px)');
 
 
+const slides = document.getElementById('slides');
+
+
+if (mediaQuery850.matches) {
+  slides.setAttribute('data-0', 'transform:translate(0%, 0%);');
+  slides.setAttribute('data-150p', 'transform:translate(0%, -70%);');
+  slides.setAttribute('data-650p', 'transform:translate(-150%, -70%);');
+  slides.setAttribute('data-1050p', 'transform:translate(-150%,-155%);');
+  slides.setAttribute('data-1250p', 'transform:translate(-200%,-155%);');
+  slides.setAttribute('data-1450p', 'transform:translate(-200%,-270%);');
+  $('.header-scroll').on('click', function () {
+    console.log('click');
+    $("html, body").animate({
+      scrollTop: window.scrollBy(0, 12500)
+    }, {
+      duration: 3700,   // по умолчанию «400»
+      easing: "linear" // по умолчанию «swing»
+    });
+
+  });
+}
+if (mediaQuery800.matches) {
+  slides.setAttribute('data-0', 'transform:translate(0%, 0%);');
+  slides.setAttribute('data-150p', 'transform:translate(0%, -80%);');
+  slides.setAttribute('data-650p', 'transform:translate(-150%, -80%);');
+  slides.setAttribute('data-1050p', 'transform:translate(-150%,-170%);');
+  slides.setAttribute('data-1250p', 'transform:translate(-200%,-170%);');
+  slides.setAttribute('data-1450p', 'transform:translate(-200%,-282%);');
+}
+if (mediaQuery775.matches) {
+  slides.setAttribute('data-0', 'transform:translate(0%, 0%);');
+  slides.setAttribute('data-150p', 'transform:translate(0%, -85%);');
+  slides.setAttribute('data-650p', 'transform:translate(-150%, -85%);');
+  slides.setAttribute('data-1050p', 'transform:translate(-150%,-205%);');
+  slides.setAttribute('data-1250p', 'transform:translate(-200%,-205%);');
+  slides.setAttribute('data-1450p', 'transform:translate(-200%,-319%);');
+}
+
 var skrl = null;
 if (!mediaTablet.matches && !mediaMobile.matches) {
   skrl = skrollr.init()
@@ -84,9 +122,6 @@ $('.burger').click(() => {
 
 
 
-const slides = document.getElementById('slides');
-
-
 if(mediaQueryMin.matches) {
   $('.header-scroll').on('click', function() {
     console.log('click');
@@ -97,39 +132,6 @@ if(mediaQueryMin.matches) {
       easing: "linear" // по умолчанию «swing»
     });
   });
-}
-
-
-if(mediaQuery850.matches) {
-  slides.setAttribute('data-150p', 'transform:translate(0%, -70%);');
-  slides.setAttribute('data-650p', 'transform:translate(-150%, -70%);');
-  slides.setAttribute('data-1050p', 'transform:translate(-150%,-155%);');
-  slides.setAttribute('data-1250p', 'transform:translate(-200%,-155%);');
-  slides.setAttribute('data-1450p', 'transform:translate(-200%,-270%);');
-  $('.header-scroll').on('click', function() {
-    console.log('click');
-    $("html, body").animate({
-      scrollTop: window.scrollBy(0, 12500)
-    }, {
-      duration: 3700,   // по умолчанию «400»
-      easing: "linear" // по умолчанию «swing»
-    });
-    
-  });
-}
-if(mediaQuery800.matches) {
-  slides.setAttribute('data-150p', 'transform:translate(0%, -80%);');
-  slides.setAttribute('data-650p', 'transform:translate(-150%, -80%);');
-  slides.setAttribute('data-1050p', 'transform:translate(-150%,-170%);');
-  slides.setAttribute('data-1250p', 'transform:translate(-200%,-170%);');
-  slides.setAttribute('data-1450p', 'transform:translate(-200%,-282%);');
-}
-if(mediaQuery775.matches) {
-  slides.setAttribute('data-150p', 'transform:translate(0%, -85%);');
-  slides.setAttribute('data-650p', 'transform:translate(-150%, -85%);');
-  slides.setAttribute('data-1050p', 'transform:translate(-150%,-175%);');
-  slides.setAttribute('data-1250p', 'transform:translate(-200%,-175%);');
-  slides.setAttribute('data-1450p', 'transform:translate(-200%,-300%);');
 }
 
 
@@ -220,7 +222,7 @@ const SVGS = {
     },
     svg5: {
       from: 12000,
-      to: 15800,
+      to: 15500,
       endPercent: 99.6,
       xOffset: -17,
       yOffset: -10
@@ -375,11 +377,11 @@ function updateSvg({ obj, scroll=null, prcnt=null }) {
 window.addEventListener('scroll', () => {
   let current = window.scrollY || window.pageYOffset;
 
-  // console.log(current);
+  console.log(current);
 
   if (mediaMobile.matches) {
     // do nothing, else tablet media will match and will do unnecessary calculations
-    // mobile animations are handled in the next code block
+    // mobile animations are handled in the next code block with IntersectionObserver
   } else if (mediaTablet.matches) {
     // tablet
     Object.values(SVGS.tablet).forEach(svg => {
@@ -396,7 +398,6 @@ window.addEventListener('scroll', () => {
     })
   }
 })
-
 
 // using IntersectionObserver for mobile animations,
 // because scroll on iOS is fucked up

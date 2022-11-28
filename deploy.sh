@@ -3,6 +3,7 @@
 # first commit to main branch
 git add .
 git commit -am "$*"
+git push
 
 # build site
 gulp build
